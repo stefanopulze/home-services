@@ -12,11 +12,5 @@ sudo adduser --no-create-home -gid 1001 --disabled-login mosquitto
 ### MQTT - Mosquitto 
 At first run the broker allow anonymous users.
 To generate the user and password use the command 
-`docker-compose exec mosquitto mosquitto_passwd -c /etc/mosquitto/passwd`
-
-Next edit `config/mosquitto.conf` and set false to *allow_anonymous* and remove the comment #password_file
-```
-allow_anonymous false
-password_file /etc/mosquitto/passwd
-```
+`docker-compose exec mosquitto mosquitto_passwd -c /etc/mosquitto/passwd <user_name>`
 
